@@ -9,3 +9,7 @@
 
 #define RGB_MATRIX_STARTUP_SPD 60
 
+// Custom QMK Code
+#define CHORDAL_HOLD
+#define TAPPING_TERM 250
+#define PERMISSIVE_HOLD
