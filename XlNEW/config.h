@@ -13,3 +13,6 @@
 #define CHORDAL_HOLD
 #define TAPPING_TERM 250
 #define PERMISSIVE_HOLD
+
+// Disable double-tapping
+#define QUICK_TAP_TERM 0
