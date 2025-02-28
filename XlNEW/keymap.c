@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_A,           KC_S,           KC_D,           KC_F,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_LEFT_CTRL,   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    KC_SPACE,       KC_TRANSPARENT,                                 KC_TRANSPARENT, OSL(6)
+                                                    KC_TRANSPARENT, KC_SPACE,                                       KC_TRANSPARENT, OSL(6)
   ),
   [6] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_0,     KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -67,9 +67,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [7] = LAYOUT_voyager(
     KC_NO,          KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,                                        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
-    KC_NO,          KC_AMPR,        KC_LCBR,        KC_UNDS,        KC_RCBR,        KC_GRAVE,                                       KC_TILD,        KC_ASTR,        KC_COLN,        KC_PIPE,        KC_BSLS,        KC_NO,          
-    KC_NO,          KC_CIRC,        KC_LPRN,        KC_EQUAL,       KC_RPRN,        KC_QUES,                                        KC_MINUS,       KC_QUOTE,       KC_DQUO,        KC_SLASH,       KC_SCLN,        KC_TRANSPARENT, 
-    KC_NO,          KC_NO,          KC_LBRC,        KC_PLUS,        KC_RBRC,        KC_NO,                                          KC_NO,          KC_LABK,        KC_MINUS,       KC_RABK,        KC_NO,          KC_NO,          
+    KC_NO,          KC_AMPR,        KC_LCBR,        KC_UNDS,        KC_RCBR,        KC_GRAVE,                                       KC_AMPR,        KC_ASTR,        KC_COLN,        KC_PIPE,        KC_BSLS,        KC_NO,          
+    KC_NO,          KC_CIRC,        KC_LPRN,        KC_EQUAL,       KC_RPRN,        KC_QUES,                                        KC_TILD,        KC_MINUS,       KC_QUOTE,       KC_DQUO,        KC_SCLN,        KC_TRANSPARENT, 
+    KC_NO,          KC_NO,          KC_LBRC,        KC_PLUS,        KC_RBRC,        KC_NO,                                          KC_NO,          KC_LABK,        KC_MINUS,       KC_RABK,        KC_SLASH,       KC_NO,          
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
