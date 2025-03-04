@@ -95,9 +95,9 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
                       uint16_t other_keycode, keyrecord_t* other_record) {
     // Exceptionally allow some one-handed chords for hotkeys.
     switch (tap_hold_keycode) {
-        case LT(7,KC_BSPC):
+        case LT(8,KC_BSPC):
             return true;
-        case LT(6,KC_ESCAPE):
+        case LT(7,KC_ESCAPE):
             return true;
     }
     // Otherwise defer to the opposite hands rule.
