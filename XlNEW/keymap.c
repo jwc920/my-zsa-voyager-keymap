@@ -81,29 +81,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
-// Custom: Chordal Hold Layout
-const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
-    LAYOUT_voyager(
-        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
-        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
-        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
-        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
-                            'L', 'L',  'R', 'R'
-    );
-
-bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
-                      uint16_t other_keycode, keyrecord_t* other_record) {
-    // Exceptionally allow some one-handed chords for hotkeys.
-    switch (tap_hold_keycode) {
-        case LT(8,KC_BSPC):
-            return true;
-        case LT(7,KC_ESCAPE):
-            return true;
-    }
-    // Otherwise defer to the opposite hands rule.
-    return get_chordal_hold_default(tap_hold_record, other_record);
-}
-// ---------------------------------------------------------------
 
 extern rgb_config_t rgb_matrix_config;
 
@@ -197,3 +174,29 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 
+
+
+
+// Custom: Chordal Hold Layout
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+    LAYOUT_voyager(
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+                            'L', 'L',  'R', 'R'
+    );
+
+bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
+                      uint16_t other_keycode, keyrecord_t* other_record) {
+    // Exceptionally allow some one-handed chords for hotkeys.
+    switch (tap_hold_keycode) {
+        case LT(8,KC_BSPC):
+            return true;
+        case LT(7,KC_ESCAPE):
+            return true;
+    }
+    // Otherwise defer to the opposite hands rule.
+    return get_chordal_hold_default(tap_hold_record, other_record);
+}
+// ---------------------------------------------------------------
